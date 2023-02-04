@@ -39,7 +39,7 @@ export default function Navbar() {
           </AvatarBadge>
         </Avatar>
         <Text>mario.net@com</Text>
-        <Button colorScheme="purple" onClick={showToast}>
+        <Button colorScheme="brand" onClick={showToast}>
           Logout
         </Button>
       </HStack>
