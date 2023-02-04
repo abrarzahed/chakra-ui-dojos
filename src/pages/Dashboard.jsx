@@ -14,10 +14,12 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { useLoaderData } from "react-router-dom";
+import data from "../../data/db";
+// import { useLoaderData } from "react-router-dom";
 
 export default function Dashboard() {
-  const tasks = useLoaderData();
+  // const tasks = useLoaderData();
+  const tasks = data?.tasks;
   return (
     <SimpleGrid spacing={10} minChildWidth="300px">
       {tasks &&
@@ -59,7 +61,7 @@ export default function Dashboard() {
   );
 }
 
-export const taskLoader = async () => {
-  const response = await fetch("http://localhost:3000/tasks");
-  return response.json();
-};
+// export const taskLoader = async () => {
+//   const response = await fetch("http://localhost:3000/tasks");
+//   return response.json();
+// };
